@@ -1,0 +1,345 @@
+body { /* Basic Styling for the Body */
+    padding: 20px;
+    background-color: #080808;
+    color: #fff;
+    text-align: center; /* Keeps overall text centered if necessary */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Skip Link Styling for Accessibility
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #fff;
+    color: #000;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: top 0.3s;
+    z-index: 100;
+  }
+  
+  /* When the skip link is focused, it becomes visible */
+  .skip-link:focus {
+    top: 10px; /* Make it visible when focused */
+  } */
+  
+  
+  /* Navbar Styles */
+  .navbar {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  /* Flexbox setup for aligning navbar items */
+  .navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+    /* Hover and focus effects for navbar links */
+  .nav-links a:hover,
+  .nav-links a:focus {
+      background-color: cyan;
+      color: black; /* Change color on hover or focus */
+      outline: none;
+      transition: color 0.3s ease;
+  }
+  
+  /* Styling for a contact button in the navbar */
+  .contact-button {
+    display: inline-block;
+    background-color: #6094da; /* Button background color */
+    color: #000;
+    padding: 6px 10px;
+    border: none; 
+    border-radius: 30px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect for the contact button */
+  .contact-button:hover ~ .nav-links a,
+  .nav-links:hover a {
+    color: black; 
+    border-radius: 40px;
+    padding: 5px;
+  }
+  
+  
+  /* Navbar heading styling */
+  .navdiv h1 {
+    color: #fff;
+  
+  }
+  
+  /* Container for the navbar layout */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  /* List styling for navigation links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  /* Adds space between navbar items */
+  .nav-links li {
+    margin-right: 25px;
+  }
+  
+  /* Navbar link styling */
+  .nav-links a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+   
+  }
+  
+  .stripe {
+    position: relative;
+  }
+  
+  .stripe::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    right: 0;
+    bottom: 5px;
+    background: rgb(14, 102, 217);
+    z-index: -1;
+  }
+  
+  
+  .system {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Wrapper for content with text overlay */
+  
+  .wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .solar {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: zoom 8s infinite ease-in-out alternate; /* Keeps zoom animation */
+  }
+  
+  @keyframes zoom {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+  
+  
+  
+  /* Styling for text overlay on an image */
+  .text {
+    position: absolute;
+    bottom : 10px;
+    left: 10px;
+    z-index: 5;
+    color:#eee;
+  }
+  .text > h2 {
+    margin: 0;
+  }
+  
+  /* Gradient text animation effect */
+  .colorshift {
+    background: -webkit-linear-gradient(90deg, blue, cyan);
+    background-size: 100% 100%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textscroll 3s infinite alternate;
+    animation-play-state: paused;
+  }
+  
+  /* Runs the animation when the wrapper is hovered */
+  
+  .wrapper:hover .colorshift {
+    animation-play-state: running;
+  }
+  
+  /* Keyframe animation for gradient movement */
+  @keyframes textscroll {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: 100% 0%;
+    }
+  }
+  
+  /* Meet the Local Section Styling */
+  .locals {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-right: 500px;
+  }
+  
+  .planets-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  /* Styling for individual planet items */
+  .planet {
+    text-align: center;
+  }
+  
+  /* Image styling within planet items */
+  .planet img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  
+  /* Heading styling within planet items */
+  .planet h2 {
+    margin-top: 10px;
+    
+  }
+  
+  
+  /* Button styling */
+  button {
+    background-color: #a012fe;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    /* Smooth transition for hover effects */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect for buttons */
+  
+  button:hover {
+    background-color: #77e5a5;
+    color: #000;
+    transform: translateY(-2px);
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  /* For Small Screens (max-width: 600px) */
+  @media (max-width: 600px) {
+    /* Adjusting the nav links to be vertical */
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      margin-bottom: 10px;
+    }
+  
+    .planet img {
+      width: 80px; 
+    }
+  
+    .wrapper {
+      padding: 10px; 
+    }
+  
+    /* Adjust 'Meet the Local' text layout */
+    .planet {
+      text-align: left;
+      align-items: flex-start; /* Ensure the text is left-aligned */
+    }
+  
+    .locals {
+      margin-right: 0; /* Remove margin on small screens */
+      margin-bottom: 20px; 
+    }
+  }
+  
+  /* For Tablets (max-width: 900px) */
+  @media (max-width: 900px) {
+    .nav-links {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .planet img {
+      width: 100px; /* Adjust image size for tablet */
+    }
+  
+    .wrapper {
+      max-width: 90%; /* Ensure wrapper is not too wide */
+    }
+  
+    /* Adjust 'Meet the Local' text layout */
+    .planet {
+      text-align: left;
+      align-items: flex-start;
+    }
+  
+    .locals {
+      margin-right: 0;
+      margin-bottom: 20px; /* Optional, adjust spacing */
+    }
+  }
+  
+  /* For Medium to Large Devices (min-width: 901px) */
+  @media (min-width: 901px) {
+    .nav-links {
+      flex-direction: row;
+    }
+  
+    .planet img {
+      width: 120px; /* Set image size for larger devices */
+    }
+  
+    .wrapper {
+      max-width: 1000px;
+    }
+  
+    /* Adjust 'Meet the Local' text layout */
+    .planet {
+      text-align: left;
+      align-items: flex-start;
+    }
+  
+    .locals {
+      margin-right: 500px; /* Ensure margin is correct for larger devices */
+    }
+  }
+  
